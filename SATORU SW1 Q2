@@ -101,9 +101,7 @@ href="https://googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:w
 </html>
 
 
-PYTHONNNNNNNNNNNNN
-
-from pyscript import document
+ 
 
 def candidate_checker(e):
     club_members = ["bong bong marcos" , "Ethan de leon" , "spider man" , "jose rizal" , "ibbara"]
