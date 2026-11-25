@@ -6,7 +6,7 @@ CLUB_MEMBERS = [
     "spider man",
     "jose rizal",
     "ibbara",
-][span_2](start_span)[span_2](end_span)
+]
 
 
 def set_status(message, state="neutral"):
@@ -55,6 +55,3 @@ def load_preset(event):
     document.getElementById("first_name").value = btn.getAttribute("data-first") or ""
     document.getElementById("last_name").value = btn.getAttribute("data-last") or ""
     candidate_checker(event)
- 
- 
- 
