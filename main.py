@@ -1,25 +1,14 @@
-from pyscript import document, when
+ from pyscript import document, when
 
-CLUB_MEMBERS = [
-    "bong bong marcos",
-    "ethan de leon",
-    "spider man",
-    "jose rizal",
-    "ibbara",
-]
+MEMBERS = ["bong bong marcos", "ethan de leon", "spider man", "jose rizal", "ibbara"]
 
-@when("click", "#enter_btn")
-def candidate_checker(event):
-    f_name = document.getElementById("first_name").value.strip()
-    l_name = document.getElementById("last_name").value.strip()
-    candidate = f"{f_name} {l_name}".strip()
+@when("click", "#check_btn")
+def check_name(event):
+    first = document.getElementById("first_name").value.strip()
+    last = document.getElementById("last_name").value.strip()
+    full_name = f"{first} {last}".strip()
 
-    is_member = candidate.lower() in CLUB_MEMBERS
-    if is_member:
-        document.getElementById("result").innerHTML = (
-            f"Congratulations! {candidate}, you are now part of the club."
-        )
+    if full_name.lower() in MEMBERS:
+        document.getElementById("result").innerHTML = f"Welcome, {full_name}!"
     else:
-        document.getElementById("result").innerHTML = (
-            f"Sorry {candidate}, your name is not on the list."
-        )
+        document.getElementById("result").innerHTML = f"{full_name} is not on the list."
