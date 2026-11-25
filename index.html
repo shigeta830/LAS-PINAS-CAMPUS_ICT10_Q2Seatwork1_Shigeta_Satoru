@@ -1,86 +1,44 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SW1 - Club Checker</title>
-    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
-    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #111111;
-            color: #ffffff;
-            font-family: 'Rajdhani', sans-serif;
-            text-align: center;
-            padding-top: 50px;
-        }
-        h1 {
-            font-family: 'Orbitron', sans-serif;
-            color: #d4af37;
-            font-size: 3rem;
-            margin: 10px 0;
-        }
-        .reactor {
-            width: 40px;
-            height: 40px;
-            background-color: #d4af37;
-            border-radius: 50%;
-            margin: 0 auto;
-        }
-        input[type="text"] {
-            background-color: #222222;
-            border: 2px solid #d4af37;
-            color: #ffffff;
-            padding: 10px;
-            margin: 8px 0;
-            width: 250px;
-            font-family: 'Rajdhani', sans-serif;
-            font-size: 1rem;
-            border-radius: 4px;
-        }
-        input[type="button"] {
-            background-color: #d4af37;
-            color: #111111;
-            border: none;
-            padding: 12px 30px;
-            margin-top: 10px;
-            font-family: 'Orbitron', sans-serif;
-            font-weight: bold;
-            font-size: 1rem;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-        input[type="button"]:hover {
-            background-color: #f3e5ab;
-        }
-        #result {
-            margin-top: 20px;
-            font-size: 1.5rem;
-            color: #d4af37;
-            font-family: 'Orbitron', sans-serif;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>SW1 Checker</title>
+  <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+  <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+  <style>
+    body {
+      background: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 60px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 6px;
+      font-size: 16px;
+    }
+    button {
+      background: gold;
+      color: #111;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      color: gold;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="reactor"></div>
-        <h1>Gooner club</h1>
-        <p>This is a club full of gooners</p>
-    </header>
+  <h1>Club Checker</h1>
+  <input type="text" id="first_name" placeholder="First name"><br>
+  <input type="text" id="last_name" placeholder="Last name"><br>
+  <button id="check_btn" type="button">Check</button>
+  <div id="result"></div>
 
-    <main>
-        <form onsubmit="return false;">
-            <input type="text" id="first_name" placeholder="Enter your first name"><br>
-            <input type="text" id="last_name" placeholder="Enter your last name"><br>
-            <input type="button" id="enter_btn" value="Enter">
-        </form>
-        <div id="result"></div>
-    </main>
-
-    <script type="py" src="./main.py"></script>
+  <script type="py" src="./main.py"></script>
 </body>
 </html>
-
